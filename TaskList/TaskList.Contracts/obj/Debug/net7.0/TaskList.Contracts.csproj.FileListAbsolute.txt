@@ -1,0 +1,12 @@
+/Users/tiwarikanha26/Desktop/Task-Lister/TaskList/TaskList.Contracts/bin/Debug/net7.0/TaskList.Contracts.deps.json
+/Users/tiwarikanha26/Desktop/Task-Lister/TaskList/TaskList.Contracts/bin/Debug/net7.0/TaskList.Contracts.dll
+/Users/tiwarikanha26/Desktop/Task-Lister/TaskList/TaskList.Contracts/bin/Debug/net7.0/TaskList.Contracts.pdb
+/Users/tiwarikanha26/Desktop/Task-Lister/TaskList/TaskList.Contracts/obj/Debug/net7.0/TaskList.Contracts.csproj.AssemblyReference.cache
+/Users/tiwarikanha26/Desktop/Task-Lister/TaskList/TaskList.Contracts/obj/Debug/net7.0/TaskList.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tiwarikanha26/Desktop/Task-Lister/TaskList/TaskList.Contracts/obj/Debug/net7.0/TaskList.Contracts.AssemblyInfoInputs.cache
+/Users/tiwarikanha26/Desktop/Task-Lister/TaskList/TaskList.Contracts/obj/Debug/net7.0/TaskList.Contracts.AssemblyInfo.cs
+/Users/tiwarikanha26/Desktop/Task-Lister/TaskList/TaskList.Contracts/obj/Debug/net7.0/TaskList.Contracts.csproj.CoreCompileInputs.cache
+/Users/tiwarikanha26/Desktop/Task-Lister/TaskList/TaskList.Contracts/obj/Debug/net7.0/TaskList.Contracts.dll
+/Users/tiwarikanha26/Desktop/Task-Lister/TaskList/TaskList.Contracts/obj/Debug/net7.0/refint/TaskList.Contracts.dll
+/Users/tiwarikanha26/Desktop/Task-Lister/TaskList/TaskList.Contracts/obj/Debug/net7.0/TaskList.Contracts.pdb
+/Users/tiwarikanha26/Desktop/Task-Lister/TaskList/TaskList.Contracts/obj/Debug/net7.0/ref/TaskList.Contracts.dll
