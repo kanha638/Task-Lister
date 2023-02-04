@@ -1,16 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y67xmgSyu85S7mjsl5HOX7np3FoJgheQLjnAXj9HLpqkCLHiWK4I5Bbci7oe8GAHhPsWjcOLlJHplhLCvNJtpA==",
+  "dgSpecHash": "We6CsMx5FWNfK5jE1mw4DuKUTj9OkQVOCy38r7v4sT/kpr/mLmXVqTVQ2qz9wNsL7z6dojqKg3/MBwEL3So8wQ==",
   "success": true,
   "projectFilePath": "/Users/tiwarikanha26/Desktop/Task-Lister/TaskList/TaskList/TaskList.csproj",
-  "expectedPackageFiles": [
-    "/Users/tiwarikanha26/.nuget/packages/microsoft.aspnetcore.openapi/7.0.2/microsoft.aspnetcore.openapi.7.0.2.nupkg.sha512",
-    "/Users/tiwarikanha26/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
-    "/Users/tiwarikanha26/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
-    "/Users/tiwarikanha26/.nuget/packages/swashbuckle.aspnetcore/6.4.0/swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
-    "/Users/tiwarikanha26/.nuget/packages/swashbuckle.aspnetcore.swagger/6.4.0/swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
-    "/Users/tiwarikanha26/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.4.0/swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
-    "/Users/tiwarikanha26/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.4.0/swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

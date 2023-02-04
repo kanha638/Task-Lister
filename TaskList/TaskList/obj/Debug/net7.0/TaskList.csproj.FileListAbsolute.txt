@@ -1,0 +1,6 @@
+/Users/tiwarikanha26/Desktop/Task-Lister/TaskList/TaskList/obj/Debug/net7.0/TaskList.csproj.AssemblyReference.cache
+/Users/tiwarikanha26/Desktop/Task-Lister/TaskList/TaskList/obj/Debug/net7.0/TaskList.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tiwarikanha26/Desktop/Task-Lister/TaskList/TaskList/obj/Debug/net7.0/TaskList.AssemblyInfoInputs.cache
+/Users/tiwarikanha26/Desktop/Task-Lister/TaskList/TaskList/obj/Debug/net7.0/TaskList.AssemblyInfo.cs
+/Users/tiwarikanha26/Desktop/Task-Lister/TaskList/TaskList/obj/Debug/net7.0/TaskList.csproj.CoreCompileInputs.cache
+/Users/tiwarikanha26/Desktop/Task-Lister/TaskList/TaskList/obj/Debug/net7.0/TaskList.MvcApplicationPartsAssemblyInfo.cache
