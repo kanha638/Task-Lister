@@ -1,28 +1,95 @@
+using TaskList.Contracts.Task;
+using TaskList.Models;
+using TaskList.ServiceErrors;
+using TaskList.Services.Tasks;
+using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
+
 namespace TaskList.Controllers;
 
-[ApiController]
-public class TasksController : ControllerBase
+public class TasksController : ApiController
 {
-    [HttpPost("/task")]
-    public IActionResult CreateTask(CreateTaskRequest request)
+    private readonly ITaskService _taskService;
+
+    public TasksController(ITaskService taskService)
     {
-        return ok(request);
-    }
-    [HttpGet("/task/{id:guid}")]
-    public IActionResult GetTask(Guid id)
-    {
-        return ok(id);
-    }
-    [HttpPut("/task/{id:guid}")]
-    public IActionResult UpsertTask(Guid id, UpsertTaskRequest request)
-    {
-        return ok(request);
+        _taskService = taskService;
     }
 
-    [HttpDelete("/task/{id:guid}")]
+    [HttpPost]
+    public IActionResult CreateTask(CreateTaskRequest request)
+    {
+        ErrorOr<Task> requestToTaskResult = Task.From(request);
+
+        if (requestToTaskResult.IsError)
+        {
+            return Problem(requestToTaskResult.Errors);
+        }
+
+        var task = requestToTaskResult.Value;
+        ErrorOr<Created> createTaskResult = _taskService.CreateTask(task);
+
+        return createTaskResult.Match(
+            created => CreatedAtGetTask(task),
+            errors => Problem(errors));
+    }
+
+    [HttpGet("{id:guid}")]
+    public IActionResult GetTask(Guid id)
+    {
+        ErrorOr<Task> getTaskResult = _taskService.GetTask(id);
+
+        return getTaskResult.Match(
+            task => Ok(MapTaskResponse(task)),
+            errors => Problem(errors));
+    }
+
+    [HttpPut("{id:guid}")]
+    public IActionResult UpsertTask(Guid id, UpsertTaskRequest request)
+    {
+        ErrorOr<task> requestToTaskResult = task.From(id, request);
+
+        if (requestToTaskResult.IsError)
+        {
+            return Problem(requestToTaskResult.Errors);
+        }
+
+        var task = requestToTaskResult.Value;
+        ErrorOr<UpsertedTask> upsertTaskResult = _taskService.UpsertTask(task);
+
+        return upsertTaskResult.Match(
+            upserted => upserted.IsNewlyCreated ? CreatedAtGetTask(task) : NoContent(),
+            errors => Problem(errors));
+    }
+
+    [HttpDelete("{id:guid}")]
     public IActionResult DeleteTask(Guid id)
     {
-        return ok(id);
+        ErrorOr<Deleted> deleteTaskResult = _taskService.DeleteTask(id);
+
+        return deleteTaskResult.Match(
+            deleted => NoContent(),
+            errors => Problem(errors));
+    }
+
+    private static TaskResponse MapTaskResponse(Task task)
+    {
+        return new TaskResponse(
+            task.Id,
+            task.Name,
+            task.Description,
+            task.StartDateTime,
+            task.EndDateTime,
+            task.LastModifiedDateTime,
+            task.Savory,
+            task.Sweet);
+    }
+
+    private CreatedAtActionResult CreatedAtGetTask(Task task)
+    {
+        return CreatedAtAction(
+            actionName: nameof(GetTask),
+            routeValues: new { id = task.Id },
+            value: MapTaskResponse(task));
     }
 }
